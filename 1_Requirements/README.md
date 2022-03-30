@@ -9,10 +9,13 @@ FEATURES
 Advantages:
 --------------------
 1.Save time on admin tasks
+
 2.Manage distribution functions
+
 3.Accurate daily reports.
 
 DisAdvantages:
 -----------------------
 1.High risk of virus attack
+
 2.All of them needs to be trained in software.
