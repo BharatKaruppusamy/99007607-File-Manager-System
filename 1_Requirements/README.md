@@ -2,18 +2,17 @@ REQUIREMENTS
 --------------------------
 INTRODUCTION
 --------------------------
-A file manager is a software program that helps a user manage all the files on their computer. A file manager can be used in all the file processes.All file managers allow the user to view, edit, copy, and delete the files on their computer storage devices in python.
+Hotel Management System is a web-based application that allows the hotel manager to handle all hotel activities online.This application gives him the power and flexibility to manage the entire system from a single online system.
 
 FEATURES
 -------------------
 Advantages:
 --------------------
-1.Cost Effective
-2.Reliable
-3.Data Sharing
+1.Save time on admin tasks
+2.Manage distribution functions
+3.Accurate daily reports.
 
 DisAdvantages:
 -----------------------
-1.Redundancy
-2.Inconsistency
-3.Data isolation
+1.High risk of virus attack
+2.All of them needs to be trained in software.
