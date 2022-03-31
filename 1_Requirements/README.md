@@ -25,8 +25,8 @@ DisAdvantages:
 
 | ID | Description | Expected I/P | Expected O/P | Actual O/P | Type of Test |
 |----|----------------------|-------------|-------------|-------------|--------------|
-|HR01|used to find room fees| To check amount |to check money received|essential||IN values|
-|HR02|used to find type of pass| To check amount|to check money received|essential|in values|
+|HR01|used to find room fees| To check amount |to check money received|essential||IN values|Money slip|
+|HR02|used to find type of pass| To check amount|to check money received|essential|in values|Money slip|
 
 
 <br>
