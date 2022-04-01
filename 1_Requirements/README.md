@@ -20,26 +20,20 @@ DisAdvantages:
 
 2.All of them needs to be trained in software.
 
-## High Level Test Plan
-<br>
-
-| ID | Description | Expected I/P | Expected O/P | Actual O/P | Type of Test |
-|----|----------------------|-------------|-------------|-------------|--------------|
-|HR01|used to find room fees| To check amount |to check money received|essential||IN values|Money slip|
-|HR02|used to find type of pass| To check amount|to check money received|essential|in values|Money slip|
-
-
-<br>
-<br>
-<br>
-
-## Low Level Test Plan
-<br>
-
-|ID| Description | Expected I/P | Expected O/P| Actual O/P | Type of Test|
-|----|------------------------|---------------|--------------|---------------|---------------|
-|LR01|used to manage billing system|check amount|numeric values|essential||Payment success|
-|LR02| used to manage all type of billing systems|values|essential|Payment Success|
-
-
-
+HIGH LEVEL REQUIREMENTS
+ ----------------------------------
+ |ID | Description|O/P|
+ |--| --|  --|
+ |HR01 |This is used for room checking|availability yes/no|
+ |HR02 |Provides billing system|numeric values|
+ |HR03 |Useful in many type of billings|numeric value|
+ 
+ 
+ 
+ LOW LEVEL REQUIREMENTS
+ ----------------------------------------
+ |ID | Description|O/P
+ |--| --|  --|
+ |LR01 |Online method is used|In mobile|
+ |LR02 |Money transaction happens|In mobile|
+ 
