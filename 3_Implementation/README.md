@@ -1,7 +1,5 @@
 import random
 import datetime
-
-
 name = []
 phno = []
 add = []
@@ -14,14 +12,8 @@ p = []
 roomno = []
 custid = []
 day = []
-
-
-
 i = 0
-
-
 def Home():
-	
 	print("\t\t\t\t\t\t WELCOME TO HOTEL ANCASA\n")
 	print("\t\t\t 1 Booking\n")
 	print("\t\t\t 2 Rooms Info\n")
@@ -29,48 +21,32 @@ def Home():
 	print("\t\t\t 4 Payment\n")
 	print("\t\t\t 5 Record\n")
 	print("\t\t\t 0 Exit\n")
-
 	ch=int(input("->"))
-	
-	if ch == 1:
+	if character == 1:
 		print(" ")
 		Booking()
-	
-	elif ch == 2:
+	elif character == 2:
 		print(" ")
 		Rooms_Info()
-	
-	elif ch == 3:
+	elif character == 3:
 		print(" ")
 		restaurant()
-	
-	elif ch == 4:
+	elif character == 4:
 		print(" ")
 		Payment()
-	
-	elif ch == 5:
+	elif character == 5:
 		print(" ")
 		Record()
-	
 	else:
 		exit()
-
-
-
 def date(c):
-	
 	if c[2] >= 2019 and c[2] <= 2020:
-		
 		if c[1] != 0 and c[1] <= 12:
-			
 			if c[1] == 2 and c[0] != 0 and c[0] <= 31:
-				
 				if c[2]%4 == 0 and c[0] <= 29:
 					pass
-				
 				elif c[0]<29:
 					pass
-				
 				else:
 					print("Invalid date\n")
 					name.pop(i)
@@ -79,28 +55,20 @@ def date(c):
 					checkin.pop(i)
 					checkout.pop(i)
 					Booking()
-			
-			
 			# if month is odd & less than equal
 			# to 7th month
 			elif c[1] <= 7 and c[1]%2 != 0 and c[0] <= 31:
 				pass
-			
 			# if month is even & less than equal to 7th
 			# month and not 2nd month
 			elif c[1] <= 7 and c[1]%2 == 0 and c[0] <= 30 and c[1] != 2:
 				pass
-			
-			# if month is even & greater than equal
+				# if month is even & greater than equal
 			# to 8th month
 			elif c[1] >= 8 and c[1]%2 == 0 and c[0] <= 31:
 				pass
-			
-			# if month is odd & greater than equal
-			# to 8th month
 			elif c[1]>=8 and c[1]%2!=0 and c[0]<=30:
 				pass
-			
 			else:
 				print("Invalid date\n")
 				name.pop(i)
@@ -109,8 +77,7 @@ def date(c):
 				checkin.pop(i)
 				checkout.pop(i)
 				Booking()
-				
-		else:
+			else:
 			print("Invalid date\n")
 			name.pop(i)
 			phno.pop(i)
@@ -118,8 +85,7 @@ def date(c):
 			checkin.pop(i)
 			checkout.pop(i)
 			Booking()
-			
-	else:
+			else:
 		print("Invalid date\n")
 		name.pop(i)
 		phno.pop(i)
@@ -127,30 +93,20 @@ def date(c):
 		checkin.pop(i)
 		checkout.pop(i)
 		Booking()
-
-
 def Booking():
-	
-		# used global keyword to
-		# use global variable 'i'
-		global i
+                global i
 		print(" BOOKING ROOMS")
 		print(" ")
-		
 		while 1:
 			n = str(input("Name: "))
 			p1 = str(input("Phone No.: "))
 			a = str(input("Address: "))
-			
-			# checks if any field is not empty
 			if n!="" and p1!="" and a!="":
 				name.append(n)
 				add.append(a)
 				break
-				
 			else:
 				print("\tName, Phone no. & Address cannot be empty..!!")
-			
 		cii=str(input("Check-In: "))
 		checkin.append(cii)
 		cii=cii.split('/')
@@ -159,7 +115,6 @@ def Booking():
 		ci[1]=int(ci[1])
 		ci[2]=int(ci[2])
 		date(ci)
-		
 		coo=str(input("Check-Out: "))
 		checkout.append(coo)
 		coo=coo.split('/')
@@ -167,19 +122,14 @@ def Booking():
 		co[0]=int(co[0])
 		co[1]=int(co[1])
 		co[2]=int(co[2])
-		
-		# checks if check-out date falls after
-		# check-in date
 		if co[1]<ci[1] and co[2]<ci[2]:
-			
-			print("\n\tErr..!!\n\tCheck-Out date must fall after Check-In\n")
+		        print("\n\tErr..!!\n\tCheck-Out date must fall after Check-In\n")
 			name.pop(i)
 			add.pop(i)
 			checkin.pop(i)
 			checkout.pop(i)
 			Booking()
 		elif co[1]==ci[1] and co[2]>=ci[2] and co[0]<=ci[0]:
-			
 			print("\n\tErr..!!\n\tCheck-Out date must fall after Check-In\n")
 			name.pop(i)
 			add.pop(i)
@@ -188,62 +138,48 @@ def Booking():
 			Booking()
 		else:
 			pass
-		
 		date(co)
 		d1 = datetime.datetime(ci[2],ci[1],ci[0])
 		d2 = datetime.datetime(co[2],co[1],co[0])
 		d = (d2-d1).days
 		day.append(d)
-		
 		print("----SELECT ROOM TYPE----")
 		print(" 1. Standard Non-AC")
 		print(" 2. Standard AC")
 		print(" 3. 3-Bed Non-AC")
 		print(" 4. 3-Bed AC")
 		print(("\t\tPress 0 for Room Prices"))
-		
-		ch=int(input("->"))
-		
-		# if-conditions to display alloted room
-		# type and it's price
-		if ch==0:
+		character=int(input("->"))
+		if character==0:
 			print(" 1. Standard Non-AC - Rs. 3500")
 			print(" 2. Standard AC - Rs. 4000")
 			print(" 3. 3-Bed Non-AC - Rs. 4500")
 			print(" 4. 3-Bed AC - Rs. 5000")
 			ch=int(input("->"))
-		if ch==1:
+		if character==1:
 			room.append('Standard Non-AC')
 			print("Room Type- Standard Non-AC")
 			price.append(3500)
 			print("Price- 3500")
-		elif ch==2:
+		elif character==2:
 			room.append('Standard AC')
 			print("Room Type- Standard AC")
 			price.append(4000)
 			print("Price- 4000")
-		elif ch==3:
+		elif character==3:
 			room.append('3-Bed Non-AC')
 			print("Room Type- 3-Bed Non-AC")
 			price.append(4500)
 			print("Price- 4500")
-		elif ch==4:
+		elif character==4:
 			room.append('3-Bed AC')
 			print("Room Type- 3-Bed AC")
 			price.append(5000)
 			print("Price- 5000")
 		else:
 			print(" Wrong choice..!!")
-
-
-		# randomly generating room no. and customer
-		# id for customer
-		rn = random.randrange(40)+300
+                rn = random.randrange(40)+300
 		cid = random.randrange(40)+10
-		
-		
-		# checks if alloted room no. & customer
-		# id already not alloted
 		while rn in roomno or cid in custid:
 			rn = random.randrange(60)+300
 			cid = random.randrange(60)+10
@@ -280,7 +216,6 @@ def Booking():
 			Home()
 		else:
 			exit()
-
 def Rooms_Info():
 	print("		 ------ HOTEL ROOMS INFO ------")
 	print("")
@@ -312,8 +247,6 @@ def Rooms_Info():
 		Home()
 	else:
 		exit()
-
-
 def restaurant():
 	ph=int(input("Customer Id: "))
 	global i
@@ -364,53 +297,53 @@ def restaurant():
 			ch=1
 			while(ch!=0):
 				
-				ch=int(input(" -> "))
+				character=int(input(" -> "))
 				
 				# if-elif-conditions to assign item
 				# prices listed in menu card
-				if ch==1 or ch==31 or ch==32:
+				if character==1 or character==31 or character==32:
 					rs=20
 					r=r+rs
-				elif ch<=4 and ch>=2:
+				elif character<=4 and character>=2:
 					rs=25
 					r=r+rs
-				elif ch<=6 and ch>=5:
+				elif character<=6 and character>=5:
 					rs=30
 					r=r+rs
-				elif ch<=8 and ch>=7:
+				elif character<=8 and character>=7:
 					rs=50
 					r=r+rs
-				elif ch<=10 and ch>=9:
+				elif character<=10 and character>=9:
 					rs=70
 					r=r+rs
-				elif (ch<=17 and ch>=11) or ch==35 or ch==36 or ch==38:
+				elif (character<=17 and character>=11) or character==35 or character==36 or character==38:
 					rs=110
 					r=r+rs
-				elif ch<=19 and ch>=18:
+				elif character<=19 and character>=18:
 					rs=120
 					r=r+rs
-				elif (ch<=26 and ch>=20) or ch==42:
+				elif (character<=26 and character>=20) or character==42:
 					rs=140
 					r=r+rs
-				elif ch<=28 and ch>=27:
+				elif character<=28 and character>=27:
 					rs=150
 					r=r+rs
-				elif ch<=30 and ch>=29:
+				elif character<=30 and character>=29:
 					rs=15
 					r=r+rs
-				elif ch==33 or ch==34:
+				elif character==33 or character==34:
 					rs=90
 					r=r+rs
-				elif ch==37:
+				elif character==37:
 					rs=100
 					r=r+rs
-				elif ch<=41 and ch>=39:
+				elif character<=41 and character>=39:
 					rs=130
 					r=r+rs
-				elif ch<=46 and ch>=43:
+				elif character<=46 and character>=43:
 					rs=60
 					r=r+rs
-				elif ch==0:
+				elif character==0:
 					pass
 				else:
 					print("Wrong Choice..!!")
@@ -456,9 +389,9 @@ def Payment():
 				print("\n Amount: ",(price[n]*day[n])+rc[n])
 				print("\n		 Pay For AnCasa")
 				print(" (y/n)")
-				ch=str(input("->"))
+				character=str(input("->"))
 				
-				if ch=='y' or ch=='Y':
+				if character=='y' or character=='Y':
 					print("\n\n --------------------------------")
 					print("		 Hotel AnCasa")
 					print(" --------------------------------")
@@ -483,7 +416,6 @@ def Payment():
 					custid.pop(n)
 					roomno.insert(n,0)
 					custid.insert(n,0)
-					
 			else:
 				
 				for j in range(n+1,i):
@@ -503,8 +435,6 @@ def Payment():
 	else:
 		exit()
 def Record():
-	
-	# checks if any record exists or not
 	if phno!=[]:
 		print("	 *** HOTEL RECORD ***\n")
 		print("| Name	 | Phone No. | Address	 | Check-In | Check-Out	 | Room Type	 | Price	 |")
@@ -523,8 +453,6 @@ def Record():
 		
 	else:
 		exit()
-
-
 Home()
 
  
