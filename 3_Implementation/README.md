@@ -55,7 +55,7 @@ def Home():
 	else:
 		exit()
 
-# Function used in booking
+
 
 def date(c):
 	
@@ -430,8 +430,7 @@ def restaurant():
 	else:
 		exit()
 	
-				
-# PAYMENT FUNCTION			
+							
 def Payment():
 	
 	ph=str(input("Phone Number: "))
