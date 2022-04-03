@@ -71,5 +71,10 @@ HIGH LEVEL REQUIREMENTS
  
  Strong Competition.
  
+ Flowchart:
+ 
+ ![Diagram](https://user-images.githubusercontent.com/98965702/161413794-67af80b0-9b53-444c-a536-b600cbee9019.png)
+
+ 
  
 
